@@ -21,7 +21,7 @@ const translations = {
 
     // Hero bölümü
     hello: "Merhaba, ben",
-    role: "Frontend Chapter Lead & Bilgisayar Mühendisliği Öğrencisi",
+    role: "Full Stack Developer & Bilgisayar Mühendisliği Öğrencisi",
     "about-me-short":
       "Kullanıcı deneyimini ön planda tutan, modern ve ölçeklenebilir web/mobil uygulamaları geliştirmeye odaklı bir bilgisayar mühendisliği öğrencisiyim. Frontend alanında uzmanlaşarak full-stack geliştirici olmayı hedefliyorum.",
     about: "Hakkımda",
@@ -148,7 +148,7 @@ const translations = {
 
     // Hero section
     hello: "Hello, I'm",
-    role: "Frontend Chapter Lead & Computer Engineering Student",
+    role: "Full Stack Developer & Computer Engineering Student",
     "about-me-short":
       "I'm a computer engineering student focused on developing modern and scalable web/mobile applications with a user experience priority. I aim to become a full-stack developer with expertise in frontend.",
     about: "About Me",

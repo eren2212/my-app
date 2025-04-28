@@ -15,9 +15,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eren İridere - Kişisel Website",
+  title: "Eren İridere",
   description:
-    "Eren İridere'nin kişisel web sitesi - Frontend Geliştirici, Bilgisayar Mühendisliği Öğrencisi",
+    "Eren İridere - Frontend Geliştirici, Bilgisayar Mühendisliği Öğrencisi",
+  icons: {
+    icon: [
+      {
+        url: "/logo.jpeg",
+        type: "image/jpeg",
+      },
+    ],
+    apple: [
+      {
+        url: "/logo.jpeg",
+        type: "image/jpeg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +42,8 @@ export default function RootLayout({
   return (
     <html lang="tr" className="scroll-smooth dark">
       <head>
+        <link rel="icon" href="/logo.jpeg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/logo.jpeg" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

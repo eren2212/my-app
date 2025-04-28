@@ -166,7 +166,7 @@ export default function Education() {
 
                     {/* Not - sadece eğitimler için */}
                     {item.type === "education" && (
-                      <div className="flex items-center gap-2 bg-glass-bg p-2 rounded-md inline-flex">
+                      <div className=" items-center gap-2 bg-glass-bg p-2 rounded-md inline-flex">
                         <span className="text-lg">🏆</span>
                         <span>{t(item.gradeKey)}</span>
                       </div>

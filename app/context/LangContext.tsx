@@ -51,9 +51,9 @@ const translations = {
 
     // Skills bölümü
     "technical-skills": "Teknik Beceriler",
-    frontend: "Önyüz",
-    mobile: "Mobil",
-    backend: "Arka Uç",
+    frontend: "Frontend",
+    mobile: "Mobile",
+    backend: "Backend",
     other: "Diğer",
     language: "Dil",
     turkish: "Türkçe",

@@ -1,26 +1,400 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f0f17;
+  --foreground: #e0e0e6;
+  --primary: #4a6ce3;
+  --primary-glow: rgba(74, 108, 227, 0.4);
+  --secondary: #3ba2d8;
+  --secondary-glow: rgba(59, 162, 216, 0.25);
+  --accent: #d35d7a;
+  --accent-glow: rgba(211, 93, 122, 0.3);
+  --muted: #1e1e2f;
+  --card-bg: rgba(25, 25, 40, 0.4);
+  --glass-bg: rgba(20, 20, 35, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shine: rgba(255, 255, 255, 0.03);
+  --border-radius: 8px;
+  --font-mono: "Fira Code", monospace;
+}
+
+/* Açık tema için değişkenler */
+.light {
+  --background: #f8f8fc;
+  --foreground: #111118;
+  --primary: #4361ee;
+  --primary-glow: rgba(67, 97, 238, 0.2);
+  --secondary: #0596d9;
+  --secondary-glow: rgba(5, 150, 217, 0.2);
+  --accent: #e11d48;
+  --accent-glow: rgba(225, 29, 72, 0.2);
+  --muted: #e5e5ef;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shine: rgba(255, 255, 255, 0.15);
+}
+
+/* Koyu tema varsayılan */
+.dark {
+  --background: #0f0f17;
+  --foreground: #e0e0e6;
+  --primary: #4a6ce3;
+  --primary-glow: rgba(74, 108, 227, 0.4);
+  --secondary: #3ba2d8;
+  --secondary-glow: rgba(59, 162, 216, 0.25);
+  --accent: #d35d7a;
+  --accent-glow: rgba(211, 93, 122, 0.3);
+  --muted: #1e1e2f;
+  --card-bg: rgba(25, 25, 40, 0.4);
+  --glass-bg: rgba(20, 20, 35, 0.3);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shine: rgba(255, 255, 255, 0.03);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-glow: var(--secondary-glow);
+  --color-accent: var(--accent);
+  --color-accent-glow: var(--accent-glow);
+  --color-muted: var(--muted);
+  --color-card-bg: var(--card-bg);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --color-glass-shine: var(--glass-shine);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-mono);
+  --border-radius: var(--border-radius);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  background-image: radial-gradient(
+      circle at 15% 50%,
+      var(--primary-glow) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      var(--secondary-glow) 0%,
+      transparent 30%
+    );
+  background-attachment: fixed;
+  line-height: 1.7;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* CSS için yumuşak sayfa geçişleri */
+section {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Sayfa bölümleri için stiller */
+section[id] {
+  scroll-margin-top: 80px; /* Header yüksekliğine göre ayarlayın */
+}
+
+/* Grid background */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-position: center center;
+  mask-image: radial-gradient(
+    ellipse 80% 50% at 50% 50%,
+    #000 40%,
+    transparent 70%
+  );
+}
+
+/* Glass effect */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    var(--glass-shine),
+    transparent,
+    transparent
+  );
+  transform: rotate(-45deg);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--glass-border);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-glow);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  padding: 1px;
+  background: linear-gradient(
+    45deg,
+    var(--primary),
+    var(--secondary),
+    var(--accent)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Section styling */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.025em;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--foreground);
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+/* Skill badge styling */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: var(--glass-bg);
+  border-radius: 9999px;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) translateX(15px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(15px) translateX(-15px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes skill-progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s ease-in-out;
+}
+
+.animate-float {
+  animation: float 12s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 12s linear infinite;
+}
+
+.animate-skill-progress {
+  animation: skill-progress 1.2s ease-out forwards;
+}
+
+.transition-all {
+  transition: all 0.4s ease;
+}
+
+/* Cursor styling */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 9999;
+}
+
+/* Scrollbar özelleştirme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
 }

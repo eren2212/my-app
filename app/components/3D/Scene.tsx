@@ -103,7 +103,7 @@ const dots = [
 ];
 
 // Yıldız efekti için noktalar
-const stars = Array.from({ length: 30 }, (_, i) => ({
+const stars = Array.from({ length: 30 }, () => ({
   size: Math.random() * 1.5 + 0.5,
   top: `${Math.random() * 100}%`,
   left: `${Math.random() * 100}%`,

@@ -34,9 +34,9 @@ const translations = {
     // About bölümü
     "about-title": "Hakkımda",
     "about-text-1":
-      "Bilgisayar Mühendisliği üçüncü sınıf öğrencisiyim. Şu an Konya'da bir şirkette, Agile sistemini uygulamaya çalıştığımız bir projede Tribda Frontend Chapter Lead olarak görev alıyorum.",
+      "Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Şu an mobil uygulamalar üzerine kendimi geliştirmekteyim .",
     "about-text-2":
-      "Aynı zamanda dönem projemi Next.js ile geliştiriyorum. Henüz herhangi bir iş deneyimim olmasa da, kodlamaya olan tutkum ve kendimi sürekli geliştirme isteğimle bilgisayar mühendisliği alanında yeni başarılar elde etmeye hevesliyim.",
+      "Aynı zamanda bitirme projemi React Native ve dahası  ile geliştiriyorum. Henüz herhangi bir iş deneyimim olmasa da, İstanbul Ziraat Katılım Bankasında staj deneyimim oldu. Kodlamaya olan tutkum ve kendimi sürekli geliştirme isteğimle bilgisayar mühendisliği alanında yeni başarılar elde etmeye hevesliyim.",
     "about-text-3":
       "Yaratıcı problem çözme becerilerim ve hızlı öğrenme yeteneğimle, bilgisayar dünyasındaki yeniliklere açık, donanımlı bir bireyim. Sektördeki fırsatları keşfetmek için heyecanlıyım.",
     "career-goal": "🎯 Kariyer Hedefi",
@@ -44,10 +44,10 @@ const translations = {
       "Kullanıcı deneyimini ön planda tutan, modern ve ölçeklenebilir web/mobil uygulamaları geliştirmeye odaklı bir bilgisayar mühendisliği öğrencisiyim. Frontend alanında uzmanlaşarak full-stack geliştirici olmayı hedefliyorum. Takım çalışmalarına yatkınım ve sürekli öğrenmeyi ilke ediniyorum.",
     education: "🎓 Eğitim",
     university:
-      "Konya Teknik Üniversitesi – Bilgisayar Mühendisliği (3. Sınıf)",
+      "Konya Teknik Üniversitesi – Bilgisayar Mühendisliği (4. Sınıf)",
     "university-location": "Konya, Türkiye | 2021 – 2026 (Beklenen mezuniyet)",
     "learning-desire": "📈 Öğrenme İsteği",
-    gpa: "GPA: 3.73/4.00",
+    gpa: "GPA: 3.75/4.00",
 
     // Skills bölümü
     "technical-skills": "Teknik Beceriler",
@@ -161,7 +161,7 @@ const translations = {
     // About section
     "about-title": "About Me",
     "about-text-1":
-      "I'm a third-year Computer Engineering student. I'm currently working as a Tribda Frontend Chapter Lead in a company in Konya, on a project where we're trying to implement the Agile system.",
+      "I'm a 4 year Computer Engineering student. I'm currently working as a Tribda Frontend Chapter Lead in a company in Konya, on a project where we're trying to implement the Agile system.",
     "about-text-2":
       "I'm also developing my term project with Next.js. Although I don't have any professional experience yet, I'm eager to achieve new successes in the field of computer engineering with my passion for coding and desire to continuously improve myself.",
     "about-text-3":
@@ -173,7 +173,7 @@ const translations = {
     university: "Konya Technical University – Computer Engineering (3rd Year)",
     "university-location": "Konya, Turkey | 2021 – 2026 (Expected graduation)",
     "learning-desire": "📈 Learning Desire",
-    gpa: "GPA: 3.73/4.00",
+    gpa: "GPA: 3.75/4.00",
 
     // Skills section
     "technical-skills": "Technical Skills",
@@ -228,7 +228,7 @@ const translations = {
     "university-department": "Computer Engineering",
     "university-description":
       "Throughout my undergraduate education, I have strived to improve myself in areas such as coding and English, and I continue to do so.",
-    "university-grade": "GPA: 3.73/4.00",
+    "university-grade": "GPA: 3.75/4.00",
 
     "highschool-name": "Kumral Abdal Anatolian High School",
     "highschool-department": "High School Education",

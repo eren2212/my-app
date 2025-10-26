@@ -31,9 +31,9 @@ export default function Contact() {
       id: 3,
       titleKey: "location",
       descriptionKey: "location-description",
-      value: "Eskişehir, Türkiye",
+      value: "İstanbul, Türkiye",
       icon: "📍",
-      link: "https://maps.google.com/?q=Eskişehir,Türkiye",
+      link: "https://maps.google.com/?q=İstanbul,Türkiye",
       color: "from-accent/30 to-primary/30",
     },
   ];

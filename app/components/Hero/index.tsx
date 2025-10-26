@@ -155,7 +155,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="text-center p-4 bg-[#1e1e2f]/30 rounded-md border border-primary/5">
-            <div className="text-2xl font-bold text-primary">3.73</div>
+            <div className="text-2xl font-bold text-primary">3.75</div>
             <div className="text-sm text-foreground/60">GPA</div>
           </div>
           <div className="text-center p-4 bg-[#1e1e2f]/30 rounded-md border border-primary/5">

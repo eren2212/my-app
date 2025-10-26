@@ -102,7 +102,7 @@ const translations = {
     "university-department": "Bilgisayar Mühendisliği",
     "university-description":
       "Lisans eğitimim boyunca kendimi kodlama, ingilizce gibi alanlarda geliştirmeye çalıştım ve halen devam etmekteyim.",
-    "university-grade": "G.A.O: 3.73/4.00",
+    "university-grade": "G.A.O: 3.75/4.00",
 
     "highschool-name": "Kumral Abdal Anadolu Lisesi",
     "highschool-department": "Lise Eğitimi",

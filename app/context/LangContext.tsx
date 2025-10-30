@@ -114,12 +114,7 @@ const translations = {
     "contact-title": "İletişime Geç",
     "contact-description":
       "Sorularınız veya iş birliği fırsatları için benimle iletişime geçebilirsiniz. En kısa sürede dönüş yapılacaktır.",
-    phone: "Telefon",
-    "phone-description": "7/24 hizmetinizdeyiz",
     email: "E-posta",
-    "email-description": "Her zaman dönüş yapılır",
-    location: "Konum",
-    "location-description": "Ofisimize bekleriz",
     "send-message": "Mesaj Gönder",
     "your-name": "Adınız",
     "your-email": "E-posta Adresiniz",

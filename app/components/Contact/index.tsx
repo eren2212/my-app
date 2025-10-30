@@ -12,7 +12,6 @@ export default function Contact() {
     {
       id: 1,
       titleKey: "phone",
-      descriptionKey: "phone-description",
       value: "+90 544 337 66 17",
       icon: "📞",
       link: "tel:+905443376617",
@@ -21,7 +20,6 @@ export default function Contact() {
     {
       id: 2,
       titleKey: "email",
-      descriptionKey: "email-description",
       value: "ereniridere1247@gmail.com",
       icon: "✉️",
       link: "mailto:ereniridere1247@gmail.com?subject=İletişim%20Talebi",
@@ -30,7 +28,6 @@ export default function Contact() {
     {
       id: 3,
       titleKey: "location",
-      descriptionKey: "location-description",
       value: "İstanbul, Türkiye",
       icon: "📍",
       link: "https://maps.google.com/?q=İstanbul,Türkiye",
@@ -94,9 +91,6 @@ export default function Contact() {
                 {item.icon}
               </div>
               <h3 className="text-xl font-bold mb-2">{t(item.titleKey)}</h3>
-              <p className="text-sm text-foreground/70 mb-2">
-                {t(item.descriptionKey)}
-              </p>
               <p className="font-medium">{item.value}</p>
             </a>
           ))}
